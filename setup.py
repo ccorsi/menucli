@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="menucli", # Replace with your own username
-    version="2020.11.14",
+    version="2021.01.31",
     author="Claudio Corsi",
     author_email="clcorsi@yahoo.com",
     description="A simple command line menu module",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ccorsi/learning/tree/menucli",
+    url="https://github.com/ccorsi/menucli",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -28,7 +28,7 @@ SOFTWARE.
 """
 
 __all__ = ["create_menu", "create_submenu", "add_menu_item_action"]
-__version__ = '2020.11.14'
+__version__ = '2021.01.31'
 __author__ = 'Claudio Corsi'
 
 """
