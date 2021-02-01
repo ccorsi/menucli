@@ -5,9 +5,9 @@ name: Build and Test for menucli Python package
 
 on:
   push:
-    branches: [ menucli ]
+    branches: [ main ]
   pull_request:
-    branches: [ menucli ]
+    branches: [ main ]
 
 jobs:
   build:
