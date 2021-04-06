@@ -5,7 +5,7 @@ import sys
 """
 MIT License
 
-Copyright (c) 2020 Claudio Corsi
+Copyright (c) 2020- Claudio Corsi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,7 @@ SOFTWARE.
 """
 
 __all__ = ["create_menu", "create_submenu", "add_menu_item_action"]
-__version__ = '2021.01.31'
+__version__ = '2021.04.06'
 __author__ = 'Claudio Corsi'
 
 """

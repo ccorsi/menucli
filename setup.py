@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="menucli", # Replace with your own username
-    version="2021.01.31",
+    version="2021.04.06",
     author="Claudio Corsi",
     author_email="clcorsi@yahoo.com",
     description="A simple command line menu module",
