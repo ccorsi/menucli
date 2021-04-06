@@ -115,3 +115,14 @@ add_menu_item_action(submenu, 'Top Level Menu Action', CallableAction(), menu)
 menu.show()
 
 ```
+## Release History
+
+### 2021.01.31
+
+- Initial Release
+
+### 2021.04.06
+
+**Bugfixes**
+
+- Action Exceptions are being propagated up
