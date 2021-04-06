@@ -173,9 +173,14 @@ class _Menu(object):
 
         item = _TopMenuItem(self)
 
-        while item is not None:
-            # Call the selected item
-            item = item()
+        try:
+            while item is not None:
+                # Call the selected item
+                item = item()
+        except Exception:
+            print('An exception was caught while processing action: {}'.format(item))
+            import traceback
+            traceback.print_exc(file=sys.stdout)
 
     def __str__(self):
         return 'Menu(items={})'.format(self._items)

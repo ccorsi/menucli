@@ -148,13 +148,18 @@ def create_exception_test_menu():
 
 
 def test_action_throws_exception():
+    """
+    This test will test that if a Action throws an exception that that exception will not be propagated out of
+    the topmenu show call.
+    """
     errors = ProcessErrors()
-    output = SendOptions(['Throws Exception'])
+    output = SendOptions(['Throws Exception'], keep=True)
 
     start_process(__name__, 'create_exception_test_menu', output, errors)
 
-    assert errors.hasError is False, 'Errors were raised when running test with error: {}'.format(errors.error)
+    assert errors.hasError is False, 'The Action exception was incorrectly propagated out of the menu call: {}'.format(errors.error)
 
+    assert 'Action is throwing an exception' in output, 'The Action command did not throw an exception'
 
 if __name__ == "__main__":
     print('Calling the test script')
