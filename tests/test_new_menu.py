@@ -66,6 +66,7 @@ class SendOptions(object):
         print('Did not find the string [{}] within the output: {}'.format(value, self._lines))
         return False
 
+
 class SendExit(object):
 
     def __call__(self, process, line):
@@ -133,6 +134,25 @@ def test_regular_expression_with_number():
 def test_regular_expression_without_number():
     v = extract_option_number('\tNo number value')
     assert v is None, 'Was not supposed to a number value'
+
+
+def throw_exception():
+    raise Exception('Action is throwing an exception')
+
+
+def create_exception_test_menu():
+    topmenu = create_menu('Top Menu', 'Exit')
+    add_menu_item_action(topmenu, 'Throws Exception', throw_exception, topmenu)
+    topmenu.show()
+
+
+def test_action_throws_exception():
+    errors = ProcessErrors()
+    output = SendOptions(['Throws Exception', 'Exit'])
+
+    start_process(__name__, 'create_exception_test_menu', output, errors)
+
+    assert errors.hasError is False, 'Errors were raised when running test with error: {}'.format(errors.error)
 
 
 if __name__ == "__main__":
