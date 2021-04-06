@@ -82,6 +82,7 @@ class SendExit(object):
 class ProcessErrors(object):
     def __init__(self):
         self._hasError = False
+        self._errors = None
 
     def __call__(self, process, line):
         print('err: {}'.format(line))
@@ -148,7 +149,7 @@ def create_exception_test_menu():
 
 def test_action_throws_exception():
     errors = ProcessErrors()
-    output = SendOptions(['Throws Exception', 'Exit'])
+    output = SendOptions(['Throws Exception'])
 
     start_process(__name__, 'create_exception_test_menu', output, errors)
 
