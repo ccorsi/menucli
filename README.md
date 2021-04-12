@@ -117,12 +117,16 @@ menu.show()
 ```
 ## Release History
 
-### 2021.01.31
+### 2021.##.##
 
-- Initial Release
+- Added License and License file information to setup.
 
 ### 2021.04.06
 
 **Bugfixes**
 
 - Action Exceptions are being propagated up
+
+### 2021.01.31
+
+- Initial Release
