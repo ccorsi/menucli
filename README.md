@@ -117,7 +117,7 @@ menu.show()
 ```
 ## Release History
 
-### 2021.##.##
+### 2021.04.12
 
 - Added License and License file information to setup.
 
